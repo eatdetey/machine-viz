@@ -1,6 +1,11 @@
 import cv2 as cv
 
-# img1 = cv.imread("horse.jpg", cv.IMREAD_GRAYSCALE)
+img1 = cv.imread("horse.jpg")
+hsv = cv.cvtColor(img1, cv.COLOR_BGR2HSV)
+
+cv.imshow('Horsen', img1)
+cv.imshow('HSV Horsen', hsv)
+
 # img2 = cv.imread("bigbob.jpeg", cv.IMREAD_COLOR_RGB)
 # img3 = cv.imread("mefr.png", cv.IMREAD_REDUCED_COLOR_2)
 #
@@ -12,10 +17,10 @@ import cv2 as cv
 # cv.imshow('Big bob window', img2)
 # cv.imshow('Me and haters fr window', img3)
 #
-# cv.waitKey(0)
-# cv.destroyAllWindows()
+cv.waitKey(0)
+cv.destroyAllWindows()
 
-cap = cv.VideoCapture("freaky-freak.mp4", cv.CAP_ANY)
+# cap = cv.VideoCapture("freaky-freak.mp4", cv.CAP_ANY)
 #
 # while (cap.isOpened()):
 #     ret, frame = cap.read()
@@ -31,16 +36,17 @@ cap = cv.VideoCapture("freaky-freak.mp4", cv.CAP_ANY)
 # cap.release()
 # cv.destroyAllWindows()
 
-fps = cap.get(cv.CAP_PROP_FPS)
-width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
-height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
-fourcc = cv.VideoWriter_fourcc(*'XVID')
-video_writer = cv.VideoWriter("copy_output.mov", fourcc, fps, (width,height))
-while (True):
-    ret, frame = cap.read()
-    cv.imshow('Video', frame)
-    video_writer.write(frame)
-    if cv.waitKey(1) & 0xFF == ord('q'):
-        break
-cap.release()
-cv.destroyAllWindows()
+# fps = cap.get(cv.CAP_PROP_FPS)
+# width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
+# height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
+# fourcc = cv.VideoWriter_fourcc(*'XVID')
+# video_writer = cv.VideoWriter("copy_output.mov", fourcc, fps, (width,height))
+# while (True):
+#     ret, frame = cap.read()
+#     cv.imshow('Video', frame)
+#     video_writer.write(frame)
+#     if cv.waitKey(1) & 0xFF == ord('q'):
+#         break
+# cap.release()
+# cv.destroyAllWindows()
+
