@@ -1,0 +1,32 @@
+import cv2 as cv
+
+# img1 = cv.imread("horse.jpg", cv.IMREAD_GRAYSCALE)
+# img2 = cv.imread("bigbob.jpeg", cv.IMREAD_COLOR_RGB)
+# img3 = cv.imread("mefr.png", cv.IMREAD_REDUCED_COLOR_2)
+#
+# cv.namedWindow('Horsen window', cv.WINDOW_FREERATIO)
+# cv.namedWindow('Big bob window', cv.WINDOW_KEEPRATIO)
+# cv.namedWindow('Me and haters fr window', cv.WINDOW_AUTOSIZE)
+#
+# cv.imshow('Horsen window', img1)
+# cv.imshow('Big bob window', img2)
+# cv.imshow('Me and haters fr window', img3)
+#
+# cv.waitKey(0)
+# cv.destroyAllWindows()
+
+cap = cv.VideoCapture("freaky-freak.mp4", cv.CAP_ANY)
+
+while (cap.isOpened()):
+    ret, frame = cap.read()
+    if ret:
+        new_size = cv.resize(frame, (600, 200))
+        cv.imshow("Video Freak", new_size)
+    else:
+        cap.set(cv.CAP_PROP_POS_FRAMES, 0)
+        continue
+    if cv.waitKey(1) & 0xFF == 27:
+        break
+
+cap.release()
+cv.destroyAllWindows()
