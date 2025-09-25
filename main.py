@@ -8,7 +8,7 @@ cv.imshow('HSV Horsen', hsv)
 
 # img2 = cv.imread("bigbob.jpeg", cv.IMREAD_COLOR_RGB)
 # img3 = cv.imread("mefr.png", cv.IMREAD_REDUCED_COLOR_2)
-#0
+# 0
 # cv.namedWindow('Horsen window', cv.WINDOW_FREERATIO)
 # cv.namedWindow('Big bob window', cv.WINDOW_KEEPRATIO)
 # cv.namedWindow('Me and haters fr window', cv.WINDOW_AUTOSIZE)
@@ -16,7 +16,7 @@ cv.imshow('HSV Horsen', hsv)
 # cv.imshow('Horsen window', img1)
 # cv.imshow('Big bob window', img2)
 # cv.imshow('Me and haters fr window', img3)
-#
+
 cv.waitKey(0)
 cv.destroyAllWindows()
 
