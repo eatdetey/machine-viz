@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/machine viz.iml" filepath="$PROJECT_DIR$/.idea/machine viz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/machine_viz.iml" filepath="$PROJECT_DIR$/.idea/machine_viz.iml" />
     </modules>
   </component>
 </project>
