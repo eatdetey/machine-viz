@@ -160,5 +160,5 @@ def multi_tracking(video_path):
     cv2.destroyAllWindows()
 
 
-video_path = "video/birds.mp4"
+video_path = "video/pukeko.mp4"
 multi_tracking(video_path)
